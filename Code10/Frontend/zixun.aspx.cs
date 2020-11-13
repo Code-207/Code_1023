@@ -9,9 +9,11 @@ namespace Code10.Frontend
 {
     public partial class zixun : System.Web.UI.Page
     {
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            rep.DataSource = BLL.Product.GetFangYang();
+            rep.DataBind();
         }
     }
 }

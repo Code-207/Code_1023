@@ -11,7 +11,7 @@ namespace Code10.Frontend
 {
 
 
-    public partial class WebForm5
+    public partial class fangyings
     {
 
         /// <summary>

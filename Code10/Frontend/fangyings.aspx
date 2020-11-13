@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Frontend/Site1.Master" AutoEventWireup="true" CodeBehind="fangyings.aspx.cs" Inherits="Code10.Frontend.WebForm5" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Frontend/Site1.Master" AutoEventWireup="true" CodeBehind="fangyings.aspx.cs" Inherits="Code10.Frontend.fangyings" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../webform项目/css1/style.css" rel="stylesheet" type="text/css" />

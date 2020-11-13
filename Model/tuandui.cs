@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Code10.Models
+namespace Model
 {
     using System;
     using System.Collections.Generic;
@@ -21,5 +21,7 @@ namespace Code10.Models
         public Nullable<int> state { get; set; }
         public string name { get; set; }
         public string intof { get; set; }
+        public string iamgeurl { get; set; }
+        
     }
 }

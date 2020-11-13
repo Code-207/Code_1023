@@ -11,7 +11,7 @@ namespace Code10.Frontend
 {
 
 
-    public partial class WebForm7
+    public partial class guanyv
     {
     }
 }

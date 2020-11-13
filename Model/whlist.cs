@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Code10.Models
+namespace Model
 {
     using System;
     using System.Collections.Generic;

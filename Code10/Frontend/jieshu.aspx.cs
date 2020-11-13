@@ -11,7 +11,10 @@ namespace Code10.Frontend
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack)
+                return;
+            jslist.DataSource = BLL.Product.GetJs();
+            jslist.DataBind();
         }
     }
 }

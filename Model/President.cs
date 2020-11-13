@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Code10.Models
+namespace Model
 {
     using System;
     using System.Collections.Generic;
@@ -19,5 +19,6 @@ namespace Code10.Models
         public Nullable<System.DateTime> uptime { get; set; }
         public Nullable<int> state { get; set; }
         public string content { get; set; }
+        public string imgurl { get; set; }
     }
 }

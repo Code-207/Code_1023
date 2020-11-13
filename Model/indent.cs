@@ -1,5 +1,5 @@
 ﻿using System;
-using Code10.Models;
+using Model;
 
 namespace Model
 {

@@ -14,6 +14,8 @@ namespace Code10.Frontend
         public static hp hp;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack)
+                return;
             about = BLL.Product.GetAbout()[0];
             hp = BLL.Product.GetHp()[0];
         }

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Code10.Frontend
 {
-    public partial class WebForm5 : System.Web.UI.Page
+    public partial class fangyings : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

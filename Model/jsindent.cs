@@ -6,7 +6,7 @@ namespace Model
     {
         public int id { get; set; }
         public string jsindent_name { get; set; }
-        public int jsindent_phone { get; set; }
+        public string jsindent_phone { get; set; }
         public int? jsindent_id { get; set; }
         public string jsindent_mail { get; set; }
         public DateTime? crtime { get; set; }

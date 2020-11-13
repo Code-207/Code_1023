@@ -84,10 +84,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="backstage\css\bootstrap.css" />
+    <Content Include="backstage\css\bootstrap4.5.3.css" />
+    <Content Include="backstage\css\use.css" />
+    <Content Include="backstage\DelObj.aspx" />
+    <Content Include="backstage\img\ailisi.jfif" />
+    <Content Include="backstage\img\fate.png" />
+    <Content Include="backstage\img\timg.jfif" />
+    <Content Include="backstage\indent\AddIndent.aspx" />
+    <Content Include="backstage\indent\Indent.aspx" />
+    <Content Include="backstage\jieshu\AddJs.aspx" />
+    <Content Include="backstage\jieshu\jieshu.aspx" />
+    <Content Include="backstage\product\Pre.aspx" />
+    <Content Include="backstage\share\del.aspx" />
+    <Content Include="backstage\share\Index.aspx" />
+    <Content Include="backstage\js\bootstrap.js" />
+    <Content Include="backstage\js\jquery.js" />
+    <Content Include="backstage\js\jquery3.5.1.js" />
+    <Content Include="backstage\js\use.js" />
+    <Content Include="backstage\share\Login.aspx" />
+    <Content Include="backstage\Users\AddUser.aspx" />
+    <Content Include="backstage\Users\User.aspx" />
     <Content Include="Frontend\css1\style.css" />
     <Content Include="Frontend\dinggous.aspx" />
     <Content Include="Frontend\dinggouss.aspx" />
     <Content Include="Frontend\ditu.aspx" />
+    <Content Include="Frontend\error.html" />
     <Content Include="Frontend\fangying.aspx" />
     <Content Include="Frontend\images1\2.jpg" />
     <Content Include="Frontend\images1\3.jpg" />
@@ -165,13 +187,13 @@
     <Content Include="Frontend\images1\you.png" />
     <Content Include="Frontend\images1\zuo.png" />
     <Content Include="Frontend\Index.aspx" />
+    <Content Include="Frontend\jieshuss.aspx" />
     <Content Include="Frontend\js1\jquery-1.9.1.min.js" />
     <Content Include="Frontend\js1\jquery.foucs.js" />
     <Content Include="Frontend\dinggou.aspx" />
     <Content Include="Frontend\fangyings.aspx" />
     <Content Include="Frontend\jieshu.aspx" />
     <Content Include="Frontend\jieshus.aspx" />
-    <Content Include="Frontend\jieshuss.aspx" />
     <Content Include="Frontend\tuandui.aspx" />
     <Content Include="Frontend\guanyv.aspx" />
     <Content Include="Frontend\wenhua.aspx" />
@@ -179,6 +201,7 @@
     <Content Include="Frontend\zixuns.aspx" />
     <Content Include="Frontend\guanyus.aspx" />
     <Content Include="Global.asax" />
+    <Content Include="jieshuss.aspx" />
     <Content Include="wwwroot\images1\timg.jfif" />
     <Content Include="Web.config" />
     <Content Include="webform项目\css1\style.css" />
@@ -352,6 +375,97 @@
     <Content Include="wwwroot\js\jquery.js" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="backstage\AddSite.Master.cs">
+      <DependentUpon>AddSite.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\AddSite.Master.designer.cs">
+      <DependentUpon>AddSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\BackStage.Master.cs">
+      <DependentUpon>BackStage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\BackStage.Master.designer.cs">
+      <DependentUpon>BackStage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\DelObj.aspx.cs">
+      <DependentUpon>DelObj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\DelObj.aspx.designer.cs">
+      <DependentUpon>DelObj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\indent\AddIndent.aspx.cs">
+      <DependentUpon>AddIndent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\indent\AddIndent.aspx.designer.cs">
+      <DependentUpon>AddIndent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\indent\Indent.aspx.cs">
+      <DependentUpon>Indent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\indent\Indent.aspx.designer.cs">
+      <DependentUpon>Indent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\jieshu\AddJs.aspx.cs">
+      <DependentUpon>AddJs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\jieshu\AddJs.aspx.designer.cs">
+      <DependentUpon>AddJs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\jieshu\jieshu.aspx.cs">
+      <DependentUpon>jieshu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\jieshu\jieshu.aspx.designer.cs">
+      <DependentUpon>jieshu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\product\Pre.aspx.cs">
+      <DependentUpon>Pre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\product\Pre.aspx.designer.cs">
+      <DependentUpon>Pre.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\share\del.aspx.cs">
+      <DependentUpon>del.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\share\del.aspx.designer.cs">
+      <DependentUpon>del.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\share\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\share\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\share\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\share\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\Users\AddUser.aspx.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\Users\AddUser.aspx.designer.cs">
+      <DependentUpon>AddUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="backstage\Users\User.aspx.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="backstage\Users\User.aspx.designer.cs">
+      <DependentUpon>User.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Frontend\dinggous.aspx.cs">
       <DependentUpon>dinggous.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -383,6 +497,13 @@
     <Compile Include="Frontend\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\jieshuss.aspx.cs">
+      <DependentUpon>jieshuss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Frontend\jieshuss.aspx.designer.cs">
+      <DependentUpon>jieshuss.aspx</DependentUpon>
     </Compile>
     <Compile Include="Frontend\Site1.Master.cs">
       <DependentUpon>Site1.Master</DependentUpon>
@@ -418,13 +539,6 @@
     </Compile>
     <Compile Include="Frontend\jieshus.aspx.designer.cs">
       <DependentUpon>jieshus.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Frontend\jieshuss.aspx.cs">
-      <DependentUpon>jieshuss.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Frontend\jieshuss.aspx.designer.cs">
-      <DependentUpon>jieshuss.aspx</DependentUpon>
     </Compile>
     <Compile Include="Frontend\tuandui.aspx.cs">
       <DependentUpon>tuandui.aspx</DependentUpon>
@@ -471,13 +585,25 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="jieshuss.aspx.cs">
+      <DependentUpon>jieshuss.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="jieshuss.aspx.designer.cs">
+      <DependentUpon>jieshuss.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tool\Admin.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\Page.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Frontend\Site1.Master" />
     <Content Include="Frontend\css1\_notes\style.css.mno" />
+    <Content Include="backstage\BackStage.Master" />
+    <Content Include="backstage\AddSite.Master" />
     <None Include="packages.config" />
-    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -489,15 +615,31 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="backstage\about\" />
+    <Folder Include="backstage\fangying\" />
+    <Folder Include="backstage\hq\" />
+    <Folder Include="backstage\tuandui\" />
+    <Folder Include="backstage\Ydintro\" />
+    <Folder Include="backstage\zixun\" />
+    <Folder Include="log\" />
     <Folder Include="Models\" />
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BackStage\BackStages.csproj">
+      <Project>{36486b99-20ce-4721-8d42-f136cd5e7b71}</Project>
+      <Name>BackStages</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{65560e14-8bee-4b1b-b3b4-b65ac0a73338}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{0e4d3a8d-8422-488b-a2da-c973bea0812f}</Project>
+      <Name>DAL</Name>
     </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{1b719dba-b511-4cd4-917d-305d2aa95105}</Project>

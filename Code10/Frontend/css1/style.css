@@ -295,10 +295,11 @@ display:none
 .shu_2 ul li { line-height:48px; font-family:"宋体"; color:#666666; font-size:12px;}
 .shu_2 h2.h2_1 { display:block; width:793px;  height:20px; line-height:20px; font-family:"宋体"; font-size:14px; color:#666666; margin-bottom:10px;}
 .shu_2 span  { font-family:"宋体"; font-size:12px; color:#666666;}
-.shu_3 { width:791px; height:705px; float:left; margin-left:157px; border:1px solid #cccccc;}
+.shu_3 { width:791px; height:300px; float:left; margin-left:157px; border:1px solid #cccccc;}
 .shu_3_1 { width:793px; height:30px; line-height:30px;  background:#cccccc;  }
 .shu_3_1 b { padding-left:10px;  font-family: "宋体"; color:#666666; font-size:14px;}
 .shu_3_2 { width:793px; height:675px;}
+
 .shu_3_2  ul { width:750px; height:580px; margin:13px 13px;}
 .shu_3_2  ul  li { line-height:22px; font-family:"宋体"; font-size:12px; color:#666666;}
 .shu_3_2 span a{ font-family: "宋体"; font-size:12px; color:#009999; float:right; padding-right:45px; padding-top:30px;}

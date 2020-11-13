@@ -11,7 +11,7 @@ namespace Code10.Frontend
 {
 
 
-    public partial class WebForm6
+    public partial class jieshus
     {
     }
 }

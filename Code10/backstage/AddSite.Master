@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AddSite.master.cs" Inherits="Code10.backstage.AddSite" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <div class="top-title">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <a class="navbar-brand  half-left " href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        XX教育</a>
+                    <div class="half-right">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active"><a href="#" class="nav-link">Name</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">修改密码</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">退出</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="center-body container">
+                <div class="body-center" id="body-center">
+                    <image width="72" height="72" src="../img/fate.png" />
+                    <div>
+                        <h1 class="title">Add Obj</h1>
+                        <p><em>No operation can be performed without logging in</em></p>
+                    </div>
+                    <p class="br"></p>
+
+                    <div class="form-group row">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+
+                    </div>
+                    <script>
+                        function GetUrlRelativePath() {
+                            var url = document.location.toString();
+                            var arrUrl = url.split("//");
+
+                            var start = arrUrl[1].indexOf("/");
+                            var relUrl = arrUrl[1].substring(start);//stop省略，截取从start开始到结尾的所有字符
+
+                            if (relUrl.indexOf("?") != -1) {
+                                relUrl = relUrl.split("?")[0];
+                            }
+                            var arr = relUrl.split("/");
+                            for (var i = 0; i < arr.length; i++) {
+                                console.log(arr[i]);
+                            }
+                            $(".title").text("Add        " + arr[arr.length - 2]);
+                            $("title").text(arr[arr.length - 2]);
+                        }
+
+                        GetUrlRelativePath();
+                    </script>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
