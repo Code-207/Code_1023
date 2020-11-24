@@ -53,7 +53,21 @@
             </asp:Repeater>
 
 
-            <div class="ye"></div>
+            
+            <nav aria-label="Page navigation example" class="pull-right">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <%
+                        //分页行数
+                        for (int i = 0; i < Count; i++)
+                        {
+                            Response.Write("<li class='page-item'><a class='page-link' href='jieshu.aspx?id=" + (i + 1) + "'>" + (i + 1) + "</a></li>");
+                        } %>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    <li class="page-item"><a class="page-link active" href="../jieshu/Add.aspx">添加</a></li>
+            
+                </ul>
+            </nav>
         </div>
     </div>
 </asp:Content>

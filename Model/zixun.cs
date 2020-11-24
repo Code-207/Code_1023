@@ -16,6 +16,9 @@ namespace Model
     {
         public int id { get; set; }
         public string title { get; set; }
+        public string name { get; set; }
+        public string imgurl { get; set; }
+        public DateTime ctime { get; set; }
         public Nullable<System.DateTime> time { get; set; }
         public string content { get; set; }
     }

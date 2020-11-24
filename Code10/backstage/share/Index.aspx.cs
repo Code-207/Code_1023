@@ -9,10 +9,11 @@ using System.Web.UI.WebControls;
 namespace Code10.backstage
 {
     public partial class Index : System.Web.UI.Page
-    {
+    { 
+       
         protected void Page_Load(object sender, EventArgs e)
         {
-            Admin.admin();
+
         }
     }
 }

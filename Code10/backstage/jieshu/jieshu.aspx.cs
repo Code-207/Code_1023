@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using Code10.Tool;
-using Model;
 
 namespace Code10.backstage.jieshu
 {
@@ -16,10 +9,10 @@ namespace Code10.backstage.jieshu
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (IsPostBack)
-                return;
-            Admin.admin();
-            Session["Table"] = "admin";
+            if (!IsPostBack)
+                Tool.Admin.admin();
+            Session["Table"] = "JieShu";
+            Session["Web_Url"] = "JieSh.aspx";
             try
             {
                 Count = Tool.Page<Model.jieshu>.TotalPage(4);

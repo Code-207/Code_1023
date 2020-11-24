@@ -51,13 +51,13 @@ namespace Code10.backstage.jieshu
         protected global::System.Web.UI.WebControls.TextBox jieshu_intro;
 
         /// <summary>
-        /// jieshu_imageurl 控件。
+        /// Img 控件。
         /// </summary>
         /// <remarks>
         /// 自动生成的字段。
         /// 若要进行修改，请将字段声明从设计器文件移到代码隐藏文件。
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox jieshu_imageurl;
+        protected global::System.Web.UI.WebControls.FileUpload Img;
 
         /// <summary>
         /// jieshu_price 控件。

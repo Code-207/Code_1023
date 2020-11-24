@@ -2,6 +2,11 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../webform项目/css1/style.css" rel="stylesheet" type="text/css" />
+    <style>
+        body {
+            overflow:auto;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="jqq">
@@ -54,6 +59,20 @@
                 </div>
             </ItemTemplate>
         </asp:Repeater>
-        <div class="ye"></div>
+        
+        <nav aria-label="Page navigation example" class="pull-right">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <%
+                    //分页行数
+                    for (int i = 0; i < Count; i++)
+                    {
+                        Response.Write("<li class='page-item'><a class='page-link' href='fangying.aspx?id=" + (i + 1) + "'>" + (i + 1) + "</a></li>");
+                    } %>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                <li class="page-item"><a class="page-link active" href="../fangying/Add.aspx">添加</a></li>
+            
+            </ul>
+        </nav>
     </div>
 </asp:Content>

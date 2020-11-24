@@ -9,7 +9,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
         <div class="jumbotron">
-            <h1 class="display-4">新增用户</h1>
+            <h1 class="display-4">产品订单</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                 </ol>
@@ -23,10 +23,10 @@
                                 <ul class="pagination">
                                     <li class="page-item"><a class="page-link" href="#">Previous</a></li>
                                     <%
-                        for (int i = 0; i < page ; i++)
-                        {
-                            Response.Write("<li class='page-item'><a class='page-link' href='Indent.aspx?id="+(i+1)+"'>"+(i+1)+"</a></li>");
-                        } %>
+                                        for (int i = 0; i < page; i++)
+                                        {
+                                            Response.Write("<li class='page-item'><a class='page-link' href='Indent.aspx?id=" + (i + 1) + "'>" + (i + 1) + "</a></li>");
+                                        } %>
 
                                     <li class="page-item"><a class="page-link" href="#">Next</a></li>
                                 </ul>
@@ -44,18 +44,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <asp:Repeater  ID="rep" runat="server">
-                            <ItemTemplate>                                
+                        <asp:Repeater ID="rep" runat="server">
+                            <ItemTemplate>
                                 <tr>
                                     <th scope="row"><%#Eval("ID") %></th>
                                     <td><%#Eval("indent_phone") %></td>
                                     <td class="root"><%#Eval("product_id")%></td>
-                                <td class="root"><%#Eval("indent_mail")%></td>
+                                    <td class="root"><%#Eval("indent_mail")%></td>
                                     <td class="root"><%#Eval("indent_site")%></td>
                                     <td>
+                                        <a href="AddIndent.aspx?id=<%#Eval("ID") %>">Add</a>
                                         <a href="../share/del.aspx?id=<%#Eval("ID") %>">del/</a>
                                         <a href="upt.html">upt</a>
-                                        </td>
+                                    </td>
                                 </tr>
                             </ItemTemplate>
                         </asp:Repeater>
@@ -78,24 +79,28 @@
             }
             var arr = relUrl.split("/");
             for (var i = 1; i < arr.length; i++) {
+                if (i == arr.length - 1) {
+                    $(".breadcrumb").append('<li class="breadcrumb-item" aria-current="page">' + arr[i] + '</li>');
+                } else {
+                    console.log(arr[i]);
+                    $(".breadcrumb").append('<li class="breadcrumb-item"><a href="#">' + arr[i] + '</a></li>');
+                }
 
-                console.log(arr[i]);
-                $(".breadcrumb").append('<li class="breadcrumb-item"><a href="#">' + arr[i] + '</a></li>')
             }
-            $(".breadcrumb>li:last").css("aria-curren", "page")
 
             return relUrl;
         }
         GetUrlRelativePath();
         if ($(".root").text() == 0) {
-            $(".root").text("超级管理员")
+            $(".root").text("超级管理员");
+        } else if ($(".root").text() == 1) {
+            $(".root").text("超级管理员");
         } else {
-            $(".root").text("普通管理员")
+            $(".root").text("普通管理员");
         }
 
-        $(".bi-chevron-up").hide()
+        $(".bi-chevron-up").hide();
         $('.left-title > div').each(function (y) {
-            console.log(y)
             var tw = "tw" + y;
             var tws = "." + tw;
             $(this).addClass(tw);

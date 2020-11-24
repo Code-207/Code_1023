@@ -11,7 +11,7 @@ namespace Code10.Frontend
 {
 
 
-    public partial class WebForm2
+    public partial class dinggou
     {
 
         /// <summary>

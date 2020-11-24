@@ -14,5 +14,7 @@ namespace Model
         public DateTime? uptime { get; set; }
         public int? state { get; set; }
         public string fangying_imageurl { get; set; }
+
+       
     }
 }

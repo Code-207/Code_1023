@@ -16,7 +16,7 @@ namespace Code10.Frontend
         {
             if (IsPostBack)
                 return;
-            about = BLL.Product.GetAbout()[0];
+            about = (About)BLL.Product.GetAbout()[0];
             hp = BLL.Product.GetHp()[0];
         }
     }

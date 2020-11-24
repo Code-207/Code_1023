@@ -2,6 +2,10 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../webform项目/css1/style.css" rel="stylesheet" type="text/css" />
+    <style>
+        .ying_1_2a > li {
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="jqq">
@@ -36,33 +40,56 @@
             <ItemTemplate>
                 <div class="ying">
                     <div class="ying_1">
-                        <div class="ying_1_1"><a href="zixuns.aspx?id=<%#Eval("id") %>">
-                            <img src="<%# Eval("fangying_imageurl")%>" /></a></div>
+                        <div class="ying_1_1">
+                            <a href="zixuns.aspx?id=<%#Eval("id") %>">
+                                <img src="<%# Eval("imgurl")%>" /></a>
+                        </div>
                         <div class="ying_1_2">
-                            <h2><a href="zixuns.aspx?id=<%#Eval("id") %>"><%# Eval("fangying_title")%></a></h2>
+                            <h2><a href="zixuns.aspx?id=<%#Eval("name") %>">/<%# Eval("title")%></a></h2>
                             <ul>
                                 <li>
-                                    <a href="#"><%# Eval("fangying_title")%></a>
+                                    <div href="#" style="width: 300px; height: 70px; overflow-x: hidden; overflow-y: hidden;"><a href="zixuns.aspx"><%# Eval("content")%></a></div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="ying_1_3">Time: <%# Eval("fangying_time")%></div>
+                        <div class="ying_1_3">Time: <%# Eval("ctime")%></div>
                     </div>
                     <div class="ying_2">
-                        <div class="ying_1_1"><a href="zixuns.aspx?id=<%#Eval("id")%>">
-                        <img src="zixuns.aspx?id=<%#Eval("id") %>" /></a></div>
+                        <div class="ying_1_1">
+                            <a href="zixuns.aspx?id=<%#Eval("id")%>">
+                                <img src="zixuns.aspx?id=<%#Eval("id") %>" /></a>
+                        </div>
                         <div class="ying_1_2a">
-                            <h2><a href="#"><%# Eval("fangying_title")%></a></h2>
+                            <h2><a href="#"><%# Eval("title")%></a></h2>
                             <ul>
-                                <li><a href="#">2月16日，赢鼎教育高考报考学分享会在吉林市站前国际大酒店圆满落幕，赢鼎教育高级讲师，资深高考报考、学业、职业规划师……</a></li>
+                                <li>
+                                    <div style="width: 300px; height: 70px; overflow-x: hidden; overflow-y: hidden;">
+                                        <a href="zixuns.aspx"><%# Eval("content")%></a>
+                                        
+                                    </div>
+                                </li>
                             </ul>
                         </div>
-                        <div class="ying_1_3">Time: <%# Eval("fangying_time")%></div>
+                        <div class="ying_1_3">Time: <%# Eval("ctime")%></div>
                     </div>
                 </div>
             </ItemTemplate>
         </asp:Repeater>
 
-        <div class="ye"></div>
+
+        <nav aria-label="Page navigation example" class="pull-right">
+            <ul class="pagination">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <%
+                    //分页行数
+                    for (int i = 0; i < Count; i++)
+                    {
+                        Response.Write("<li class='page-item'><a class='page-link' href='zixun.aspx?id=" + (i + 1) + "'>" + (i + 1) + "</a></li>");
+                    } %>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                <li class="page-item"><a class="page-link active" href="../zixun/Add.aspx">添加</a></li>
+
+            </ul>
+        </nav>
     </div>
 </asp:Content>

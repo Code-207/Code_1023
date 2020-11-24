@@ -20,23 +20,33 @@ namespace Code10.backstage.share
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            Response.Write("暂不支持此功能");
+            Response.Write("<script>暂不支持此功能</script>");
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var p = BackStages.Users<admin>.login<Model.admin>(Acc.Text,Pwd.Text);
-            if (p.id != 0)
+            try
             {
-                Session["Name"] = p.name;
-                Session["Root"] = p.root;
-                Session["img"] = p.imurl;
-                Response.Redirect("Index.aspx");
+                var p = BackStages.Users<admin>.login(Acc.Text, Pwd.Text);
+                Tool.Tool.Alert(p.name);
+                if (p.id != 0)
+                {
+                    Tool.Tool.Alert(p.name);
+                    Session["Name"] = p.name;
+                    Session["Root"] = p.root;
+                    Session["Img"] = p.imurl;
+                    Response.Redirect("Index.aspx");
+                }
+                else
+                {
+                    Tool.Tool.Alert("登录失败");
+                }
             }
-            else 
+            catch (Exception exception)
             {
-                Response.Write("输入错误");
+                Tool.Tool.Alert("登录失败");
             }
+           
         }
     }
 }

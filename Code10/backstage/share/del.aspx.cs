@@ -25,7 +25,9 @@ namespace Code10.backstage.share
             
                 Response.Write("<script>console.log('1')</script>");
                 int id = int.Parse(Request["id"]);
-                BackStages.List<object>.DelObj(Session["Table"].ToString(),id);
+                Response.Write("<script>console.log('"+ BackStages.List<object>.DelObj(Session["Table"].ToString(), id) +"')</script>");
+                Response.Redirect("../"+Session["table"]+"/"+ Session["table"] + ".aspx");
+
         }
     }
 }

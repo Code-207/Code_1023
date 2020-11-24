@@ -9,7 +9,7 @@
     
     <div>
         <div class="jumbotron">
-            <h1 class="display-4">新增用户</h1>
+            <h1 class="display-4">书库管理！</h1>
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
                 </ol>
@@ -72,13 +72,14 @@
             }
             var arr = relUrl.split("/");
             for (var i = 1; i < arr.length; i++) {
+                if (i == arr.length - 1) {
+                    $(".breadcrumb").append('<li class="breadcrumb-item" aria-current="page">' + arr[i] + '</li>');
+                } else {
+                    console.log(arr[i]);
+                    $(".breadcrumb").append('<li class="breadcrumb-item"><a href="#">' + arr[i] + '</a></li>');
+                }
 
-                console.log(arr[i]);
-                $(".breadcrumb").append('<li class="breadcrumb-item"><a href="#">' + arr[i] + '</a></li>');
             }
-            $(".breadcrumb>li:last").css("aria-curren", "page");
-
-            return relUrl;
         }
         GetUrlRelativePath();
 

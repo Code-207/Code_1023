@@ -1,0 +1,42 @@
+body {
+    background-image: url("../img/3.png");
+    background-size: cover;
+    margin: 0 auto;
+    height: 1080px;
+            overflow: hidden;
+}
+
+.jumbotron {
+    width: 90%;
+    opacity: 0.93;
+    margin-top: 5%
+}
+.right-80{
+    margin-left: 80% !important
+}
+.bg-none{
+    background: none;
+    border: none;
+}
+.bg-none>select{
+    width: 32%;
+}
+.lower-right{
+    position: relative;
+    top: 80px;
+    left: 61px;
+}
+#Image1 {
+    margin-top: 10%;
+    width: 220px;
+    height: 330px
+}
+.top-5 {
+    margin-top: 5%;
+}
+.affdix {
+    margin-left:5%
+}
+input[type=file]{
+    width: 220px;
+}

@@ -15,5 +15,8 @@ namespace Model
         public Nullable<System.DateTime> uptime { get; set; }
         public Nullable<int> state { get; set; }
         public string hq_site { get; set; }
+        public string Img_url { get; set; }
+
+        
     }
 }

@@ -33,7 +33,7 @@
     </div>
     <label for="jieshu_imageurl" class="col-sm-3 col-form-label h4">封面路径:</label>
     <div class="col-sm-9">
-        <asp:TextBox ID="jieshu_imageurl" runat="server" class="form-control form-control-add"></asp:TextBox>
+        <asp:FileUpload ID="Img" runat="server" />
     </div>
     <label for="jieshu_price" class="col-sm-3 col-form-label h4">价格:</label>
     <div class="col-sm-9">

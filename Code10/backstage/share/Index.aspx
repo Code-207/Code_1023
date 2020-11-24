@@ -4,6 +4,7 @@
     <script src="../js/jquery3.5.1.js"></script>
     <script src="../js/use.js"></script>
     <link rel="stylesheet" href="../css/use.css">
+    <script src="https://code.highcharts.com/highcharts.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div> 
@@ -15,32 +16,73 @@
             </nav>
                       <hr class=" my-4">
                       <div class="table-responsive">
-                        <table class="table">
-                            <caption>List of users</caption>
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                                <th>操作</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                                <td>
-                                    <a href="add.html">add/</a>
-                                    <a href="del.html">del/</a>
-                                    <a href="upt.html">upt</a>
-                              </tr>
-                            </tbody>
-                          </table>
+                          <div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
                       </div>
-                    
+                    <script language="JavaScript">
+                        $(document).ready(function () {
+                            var title = {
+                                text: '订单管理'
+                            };
+                            var subtitle = {
+                                text: 'Share/Index'
+                            };
+                            var xAxis = {
+                                categories: ['一月', '二月', '三月', '四月', '五月', '六月'
+                                    , '七月', '八月', '九月', '十月', '十一月', '十二月']
+                            };
+                            var yAxis = {
+                                title: {
+                                    text: '人员详情'
+                                },
+                                plotLines: [{
+                                    value: 0,
+                                    width: 1,
+                                    color: '#808080'
+                                }]
+                            };
+
+                            var tooltip = {
+                                valueSuffix: '\xB0C'
+                            }
+
+                            var legend = {
+                                layout: 'vertical',
+                                align: 'right',
+                                verticalAlign: 'middle',
+                                borderWidth: 0
+                            };
+
+                            var series = [
+                                {
+                                    name: '商品订单',
+                                    data: [0, 0, 0, 0, 0, 0, 0,
+                                        0, 0, 0, 4, 0]
+                                },
+                                {
+                                    name: '借书订单',
+                                    data: [0, 0, 0, 0, 0, 0, 0,
+                                        0, 0, 0, 15, 0]
+                                },
+                                {
+                                    name: '人员人数',
+                                    data: [0, 0, 0, 0, 0, 0, 0,
+                                        0, 0, 0, 12, 0]
+                                }
+                            ];
+
+                            var json = {};
+
+                            json.title = title;
+                            json.subtitle = subtitle;
+                            json.xAxis = xAxis;
+                            json.yAxis = yAxis;
+                            json.tooltip = tooltip;
+                            json.legend = legend;
+                            json.series = series;
+
+                            $('#container').highcharts(json);
+                        });
+                    </script>
                   </div>
          <script>
         function GetUrlRelativePath() {
@@ -96,5 +138,52 @@
         $('.left-title').css('height', $(window).height() - $('.top-title').height() - 3)
         $('.right-index').css('height', $(window).height() - $('.top-title').height() - 3)
          </script>
+         
+<!-- 去掉 pre 前面的空格 -->
+< pre id="tsv" style="display:none">
+Browser Version   Total Market Share
+Microsoft Internet Explorer 8.0  26.61%
+Microsoft Internet Explorer 9.0  16.96%
+Chrome 18.0 8.01%
+Chrome 19.0 7.73%
+Firefox 12  6.72%
+Microsoft Internet Explorer 6.0  6.40%
+Firefox 11  4.72%
+Microsoft Internet Explorer 7.0  3.55%
+Safari 5.1  3.53%
+Firefox 13  2.16%
+Firefox 3.6 1.87%
+Opera 11.x  1.30%
+Chrome 17.0 1.13%
+Firefox 10  0.90%
+Safari 5.0  0.85%
+Firefox 9.0 0.65%
+Firefox 8.0 0.55%
+Firefox 4.0 0.50%
+Chrome 16.0 0.45%
+Firefox 3.0 0.36%
+Firefox 3.5 0.36%
+Firefox 6.0 0.32%
+Firefox 5.0 0.31%
+Firefox 7.0 0.29%
+Proprietary or Undetectable   0.29%
+Chrome 18.0 - Maxthon Edition 0.26%
+Chrome 14.0 0.25%
+Chrome 20.0 0.24%
+Chrome 15.0 0.18%
+Chrome 12.0 0.16%
+Opera 12.x  0.15%
+Safari 4.0  0.14%
+Chrome 13.0 0.13%
+Safari 4.1  0.12%
+Chrome 11.0 0.10%
+Firefox 14  0.10%
+Firefox 2.0 0.09%
+Chrome 10.0 0.09%
+Opera 10.x  0.09%
+Microsoft Internet Explorer 8.0 - Tencent Traveler Edition  0.09%
+< /pre><!-- 去掉 pre 前面的空格 -->
+</body>
+</html>
             </div>
 </asp:Content>

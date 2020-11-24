@@ -14,10 +14,9 @@ namespace Code10.backstage.indent
         public static int Conut = 1;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(IsPostBack)
-                return;
             //Tool.Admin.admin();
-            Session["Table"] = "admin";
+            Session["Table"] = "indent";
+            Session["Web_Url"] = "indent.aspx";
             try
             {
                 Response.Write("<script>console.log('TYPE:" + nameof(Model.indent) + "')</script>");
@@ -29,7 +28,7 @@ namespace Code10.backstage.indent
             }
             catch (Exception)
             {
-                Response.Redirect("../Users/User.aspx?id=1&table=admin");
+                //Response.Redirect("../indent/indent.aspx");
                 rep.DataSource = BackStages.List<Model.indent>.GetObj("indent", 4,page);
                 rep.DataBind();
             }
